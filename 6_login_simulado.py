@@ -18,7 +18,7 @@ while intentos > 0:
         if intentos == 0:
            for i in range(10):
             os.system('cls') 
-            print(f"para volver a ingresar tus datos espera {i + 1} segundos")
+            print(f"para volver a ingresar tus datos espera {10 - i} segundos")
             time.sleep(1)
            intentos = 3
         
