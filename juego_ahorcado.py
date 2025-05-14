@@ -1,6 +1,6 @@
 palabras = ["metacrilato","otorrinolaringologia","paralelepipedo"]
-palabra_elegida = [0]
 intentos = 0
+bandera = False
 
 print("Hola, bienvenido al ahorcado, en este juego vas a tener 10 intentos para adivinar la palabra oculta tene en cuenta que por cada intento fallido se resta uno. Mucha suerte!")
 
@@ -10,7 +10,8 @@ try:
     numero = int(numero_usuario)
 except ValueError: 
     input("el numero no es valido, ingrese otro numero")
-    numero = -1
+    numero = 1
+    
 
 
 if numero == 1:
@@ -23,18 +24,20 @@ else:
 
 print("tu palabra elegida es la siguiente")
 
-palabra_oculta = print(len(palabra_elegida) * "_ ")
+palabra_oculta = len(palabra_elegida) * "_ "
+print(palabra_oculta)
 
 
 
-while intentos < 10:
+while intentos < 10 and bandera == False:
     letras_del_usuario = input ("ingresa una letra: ")
     letra_a_minuscula = letras_del_usuario.lower()
 
-    for i in palabra_elegida:
+    if  letra_a_minuscula in palabra_elegida:
         indice = palabra_elegida.find(letra_a_minuscula)
-        if  letra_a_minuscula in palabra_elegida:
-             print(indice)
+        palabra_oculta =  palabra_oculta[:indice] + letra_a_minuscula + palabra_oculta[indice+1:]
+        print(palabra_oculta)
+
 
 
 
