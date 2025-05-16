@@ -1,4 +1,5 @@
-numero_invisible = 48
+import random
+numero_invisible = random.randint(1,100)
 intentos = 10
 import os
 
@@ -35,4 +36,4 @@ while intentos > 0 and numero_usuario != numero_invisible :
 if numero_usuario == numero_invisible:
     print("felicidades adivinaste el numero!!")
 else:
-    print("lo siento, no lograste adivinarlo")
+    print(f"lo siento, no lograste adivinarlo, el numero era {numero_invisible}")
