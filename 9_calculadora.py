@@ -1,4 +1,5 @@
 bandera = False
+import os
 
 while bandera == False:
 
@@ -32,6 +33,8 @@ while bandera == False:
             respuesta = input("desea realizar otra operacion? (si/no)\n")
             respuesta_minuscula = respuesta.lower()
 
+        os.system("cls")
+        
         if respuesta_minuscula == "no":
             bandera = True
             print("hasta la proxima")
