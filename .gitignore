@@ -18,24 +18,22 @@ if numero == 1:
     palabra_elegida = palabras[0]
 elif numero == 2:
     palabra_elegida = palabras[1]
-else:
+elif numero == 3:
     palabra_elegida = palabras[2]
     
 
 print("tu palabra elegida es la siguiente")
 
-palabra_oculta = len(palabra_elegida) * "_ "
+palabra_oculta = len(palabra_elegida) * "_"
 print(palabra_oculta)
 
-
-
 while intentos < 10 and bandera == False:
-    letras_del_usuario = input ("ingresa una letra: ")
-    letra_a_minuscula = letras_del_usuario.lower()
+    letra = input ("ingresa una letra: ")
+    letra_minuscula = letra.lower()
 
-    if  letra_a_minuscula in palabra_elegida:
-        indice = palabra_elegida.find(letra_a_minuscula)
-        palabra_oculta =  palabra_oculta[:indice] + letra_a_minuscula + palabra_oculta[indice+1:]
+    if  letra_minuscula in palabra_elegida:
+        indice = palabra_elegida.find(letra_minuscula)
+        palabra_oculta =  palabra_oculta[:indice] + letra_minuscula + palabra_oculta[indice+1:]
         print(palabra_oculta)
 
 
