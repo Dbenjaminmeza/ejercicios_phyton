@@ -34,14 +34,17 @@ print(palabra_oculta)
 while intentos < 10 and bandera == False:
     letra = input ("ingresa una letra: ")
     letra_minuscula = letra.lower()
+    """
+        if  letra_minuscula in palabra_elegida:
+            indice = palabra_elegida.find(letra_minuscula)
+            palabra_oculta =  palabra_oculta[:indice] + letra_minuscula + palabra_oculta[indice+1:]
+            print(palabra_oculta)
 
-    if  letra_minuscula in palabra_elegida:
-        indice = palabra_elegida.find(letra_minuscula)
-        palabra_oculta =  palabra_oculta[:indice] + letra_minuscula + palabra_oculta[indice+1:]
-        print(palabra_oculta)
-
-
-
-
-
-
+    """
+    for i in palabra_elegida:
+        if letra_minuscula == i:
+            indice = palabra_elegida.find(letra_minuscula)
+            palabra_oculta = palabra_oculta[:indice] + letra_minuscula + palabra_oculta[indice+1:]
+        else:
+            palabra_oculta
+    print(palabra_oculta)
