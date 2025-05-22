@@ -4,7 +4,7 @@
 # 1- Mostrá cuántas veces aparece “rojo” usando .count().
 # 2- Reemplazá el primer “verde” por “amarillo”
 # 3- Mostrá la lista final
-# El objetivo es usar el método .count(), acceso por índice, asignación de valor. 
+# El objetivo es usar el método .count(), acceso por índice, asignación de valor.
 
 lista = ["rojo", "azul", "verde", "rojo", "azul", "rojo"]
 
