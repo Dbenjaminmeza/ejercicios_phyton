@@ -34,4 +34,3 @@ for n in lista_de_numeros:
 print(f"la lista de numeros ingresados es: {lista_de_numeros}")
 print(f"la cantidad de numeros pares es: {cantidad_pares}")
 print(f"la cantidad de numeros impares es: {cantidad_impares}")
-
