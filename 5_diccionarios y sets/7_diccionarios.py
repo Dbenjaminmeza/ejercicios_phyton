@@ -56,5 +56,7 @@ print(estudiante_2["curso"]["tags"])
 print(estudiante_2["curso"]["tags"][3])
 print(estudiante_2["curso"]["tags"][3])
 
-estudiante_2["curso"]["tags"] = "java"
+# anadir elementos
+estudiante_2["curso"]["horarios"] = "10:30 am"
+estudiante_2["curso"]["tags"].append("java")
 print(estudiante_2)
