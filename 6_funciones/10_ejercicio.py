@@ -49,29 +49,35 @@ estudiantes = [
 def estudiante_elegido(nombre):
 
     for estudiante in estudiantes:
-       if nombre == estudiante["nombre"]:
-        notas = estudiante["notas"]
-        return notas
+        if nombre == estudiante["nombre"]:
+            notas = estudiante["notas"]
+            return notas
+    return None
+    
         
 def materia_elegida(materia):
-
+    if estudiante_elegido(nombre) is None:
+        print("no se encontro el alumno")
+        return
     if materia in estudiante_elegido(nombre):
         notas = estudiante_elegido(nombre)
         if materia == "mate":
-           nota = notas["mate"]
+            nota = notas["mate"]
         elif materia == "castellano":
             nota = notas["castellano"]
         elif materia == "ingles":
             nota = notas["ingles"]
-        print(f"las del trimestre son {nota}")
+        print(f"las notas del trimestre son {nota}")
         nota = sum(nota.values())/len(nota.values())
         print(f"el promedio del alumno es {nota}")
+        if nota >= 6:
+            print(f"el alumno {nombre} aprobo la materia")
+        else:
+            print(f"el alumno {nombre} no aprobo la materia")
     else:
-        print("materia no encontrada")    
+        print("materia no encontrada")
 
-        
-
-
+ 
 nombre = input("ingrese el nombre del alumno a consultar: ")
 materia = input("ingrese la materia a consultar: ")
 materia_elegida(materia)
