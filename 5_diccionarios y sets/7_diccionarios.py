@@ -35,7 +35,7 @@ print(estudiante)
 # print claves del diccionario
 print(f"las claves del diccionario son {estudiante.values()}")
 # print valores del diccionario
-print(f"los valores del diccionario son {estudiante.values()}")
+print(f"los valores del diccionario son {estudiante.keys()}")
 
 # print valores del diccionario en una lista
 print(f"los valores del diccionario son {list(estudiante.values())}")
