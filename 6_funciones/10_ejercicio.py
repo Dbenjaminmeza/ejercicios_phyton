@@ -8,9 +8,9 @@ estudiantes = [
     "nombre": "Juan",## estudiante 1
     "notas": {
         "mate": {
-            "trimestre_uno": 10,
-            "trimestre_dos": 5,
-            "trimestre_tres": 8,
+            "trimestre_uno": 8,
+            "trimestre_dos": 4,
+            "trimestre_tres": 5,
             },
         "castellano": {
             "trimestre_uno": 10,
@@ -19,23 +19,23 @@ estudiantes = [
             },
         "ingles": {
             "trimestre_uno": 10,
-            "trimestre_dos": 5,
-            "trimestre_tres": 8,
+            "trimestre_dos": 9,
+            "trimestre_tres": 7,
         }
     }
     },
     {
-    "nombre": "benja",## estudiante 2
+    "nombre": "Benja",## estudiante 2
     "notas": {
         "mate": {
-            "trimestre_uno": 10,
-            "trimestre_dos": 5,
-            "trimestre_tres": 8,
+            "trimestre_uno": 4,
+            "trimestre_dos": 2,
+            "trimestre_tres": 10,
             },
         "castellano": {
-            "trimestre_uno": 3,
+            "trimestre_uno": 6,
             "trimestre_dos": 5,
-            "trimestre_tres": 3,
+            "trimestre_tres": 7,
             },
         "ingles": {
             "trimestre_uno": 1,
@@ -47,7 +47,7 @@ estudiantes = [
 ]
 
 def estudiante_elegido(nombre):
-
+    nombre = nombre.capitalize()
     for estudiante in estudiantes:
         if nombre == estudiante["nombre"]:
             notas = estudiante["notas"]
