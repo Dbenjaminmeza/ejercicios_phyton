@@ -56,12 +56,13 @@ def estudiante_elegido(nombre):
     
         
 def materia_elegida(materia):
-    if estudiante_elegido(nombre) is None:
+    estudiante = estudiante_elegido(nombre)
+    if estudiante is None:
         print("no se encontro el alumno")
         return
     materia =  materia.lower()
-    if materia in estudiante_elegido(nombre):
-        notas = estudiante_elegido(nombre)
+    if materia in estudiante:
+        notas = estudiante
         if materia == "mate":
             nota = notas["mate"]
         elif materia == "castellano":
