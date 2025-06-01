@@ -59,6 +59,7 @@ def materia_elegida(materia):
     if estudiante_elegido(nombre) is None:
         print("no se encontro el alumno")
         return
+    materia =  materia.lower()
     if materia in estudiante_elegido(nombre):
         notas = estudiante_elegido(nombre)
         if materia == "mate":
