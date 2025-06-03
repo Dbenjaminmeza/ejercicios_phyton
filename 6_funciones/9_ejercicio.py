@@ -13,11 +13,14 @@ estudiantes = {
 }
 
 def agregar_estudiante(base , nombre, notas):
+    """ este es un texto dentro de la funcion:
+    con esta funcion podemos agregar un estudiantes al diccionario """
     base[nombre] = notas
     
 
 agregar_estudiante(estudiantes, "elias", [1,4,8])
 print(estudiantes)
+print(agregar_estudiante.__doc__)
 
 def promedio_estudiantes(base, nombre):
     notas = base[nombre]
