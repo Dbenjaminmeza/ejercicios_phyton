@@ -31,5 +31,15 @@ def mostrar_info(*args, nombre, edad = 0, **kwargs):
     print(edad)
     print(kwargs)
 
-
+#otro ejemplo
 mostrar_info(24,"info", nombre = "benja", edad = 23, ciudad = "resistencia" )
+
+
+def mostrar_info(nombre, edad, *args, **kwargs):
+    print(nombre)
+    print(edad)
+    print(args)
+    print(kwargs)
+
+
+mostrar_info("benja", 24,"info", 23, ciudad = "resistencia" )
